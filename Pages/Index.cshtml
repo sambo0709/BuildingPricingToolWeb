@@ -1,0 +1,72 @@
+﻿@page
+@model IndexModel
+
+<main>
+    <header>
+        <h1>Building Pricing Tool</h1>
+        <p>Enter the building details below to calculate an estimate.</p>
+    </header>
+
+    <section>
+        <h2>Building Details</h2>
+
+        <form method="post">
+            <fieldset>
+                <legend>Dimensions</legend>
+
+                <p>
+                    <label asp-for="Width">Width (ft)</label>
+                    <input asp-for="Width" type="number" step="0.01" />
+                </p>
+
+                <p>
+                    <label asp-for="Length">Length (ft)</label>
+                    <input asp-for="Length" type="number" step="0.01" />
+                </p>
+
+                <p>
+                    <label asp-for="WallHeight">Wall Height (ft)</label>
+                    <input asp-for="WallHeight" type="number" step="0.01" />
+                </p>
+
+                <p>
+                    <label asp-for="RoofPitch">Roof Pitch</label>
+                    <input asp-for="RoofPitch" type="number" step="0.01" />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Features</legend>
+
+                <p>
+                    <label asp-for="DoorCount">Doors</label>
+                    <input asp-for="DoorCount" type="number" />
+                </p>
+
+                <p>
+                    <label asp-for="WindowCount">Windows</label>
+                    <input asp-for="WindowCount" type="number" />
+                </p>
+            </fieldset>
+
+            <button type="submit">Calculate Estimate</button>
+        </form>
+    </section>
+
+    @if (Model.EstimateResult != null)
+    {
+        <section>
+            <h2>Estimate Results</h2>
+
+            <p>Floor Area: @Model.EstimateResult.FloorArea.ToString("N2") sq ft</p>
+            <p>Wall Area: @Model.EstimateResult.WallArea.ToString("N2") sq ft</p>
+            <p>Roof Area: @Model.EstimateResult.RoofArea.ToString("N2") sq ft</p>
+
+            <p>Material Cost: $@Model.EstimateResult.MaterialCost.ToString("N2")</p>
+            <p>Labor Cost: $@Model.EstimateResult.LaborCost.ToString("N2")</p>
+            <p>Total Cost: $@Model.EstimateResult.TotalCost.ToString("N2")</p>
+
+            <p><strong>Fusion CSV file updated successfully.</strong></p>
+        </section>
+    }
+</main>
