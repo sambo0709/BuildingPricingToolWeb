@@ -1,27 +1,34 @@
 using BuildingPricingToolWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 
 namespace BuildingPricingToolWeb.Pages
 {
     public class IndexModel : PageModel
     {
-        [BindProperty]
+        [BindProperty] 
+        [Range(1, 500, ErrorMessage = "Width must be greater than 0.")]
         public double Width { get; set; }
 
-        [BindProperty]
+        [BindProperty] 
+        [Range(1, 1000, ErrorMessage = "Length must be greater than 0.")]
         public double Length { get; set; }
 
-        [BindProperty]
+        [BindProperty] 
+        [Range(1, 100, ErrorMessage = "Wall height must be greater than 0.")]
         public double WallHeight { get; set; }
 
         [BindProperty]
+        [Range(0, 24, ErrorMessage = "Roof pitch cannot be negative.")] 
         public double RoofPitch { get; set; }
 
         [BindProperty]
+        [Range(0, 100, ErrorMessage = "Door count cannot be negative.")] 
         public int DoorCount { get; set; }
 
-        [BindProperty]
+        [BindProperty] 
+        [Range(0, 500, ErrorMessage = "Window count cannot be negative.")]
         public int WindowCount { get; set; }
 
         public Estimate? EstimateResult { get; set; }
@@ -30,8 +37,13 @@ namespace BuildingPricingToolWeb.Pages
         {
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
             Building building = new Building(Width, Length, WallHeight, RoofPitch);
 
             double floorArea = building.CalculateFloorArea();
@@ -53,10 +65,10 @@ namespace BuildingPricingToolWeb.Pages
             };
 
             string filePath = "/Users/samuel/BuildingPricingTool/fusion_building_data.csv";
-
             string csvData = $"{Width},{Length},{WallHeight},{RoofPitch},{DoorCount},{WindowCount}";
-
             System.IO.File.WriteAllText(filePath, csvData);
+
+            return Page();
         }
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/samuel/BuildingPricingToolWeb/BuildingPricingToolWeb.csproj",
+      "projectUniqueName": "/Users/samuel/Documents/GitHub/BuildingPricingToolWeb/BuildingPricingToolWeb.csproj",
       "projectName": "BuildingPricingToolWeb",
-      "projectPath": "/Users/samuel/BuildingPricingToolWeb/BuildingPricingToolWeb.csproj",
+      "projectPath": "/Users/samuel/Documents/GitHub/BuildingPricingToolWeb/BuildingPricingToolWeb.csproj",
       "packagesPath": "/Users/samuel/.nuget/packages/",
-      "outputPath": "/Users/samuel/BuildingPricingToolWeb/obj/",
+      "outputPath": "/Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/samuel/.nuget/NuGet/NuGet.Config"

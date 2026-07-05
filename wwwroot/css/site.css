@@ -20,6 +20,18 @@ main {
   padding: 24px;
   flex: 1;
 }
+.validation-summary {
+    color: #b00020;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.validation-message {
+    color: #b00020;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 4px;
+}
 
 header {
   margin-bottom: 30px;
