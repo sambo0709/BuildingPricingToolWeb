@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BuildingPricingToolWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9388e30859224021bc0546e019de23022faf2b8f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e51f6107006cbd5b67dc2f90e55990feaa2dd55e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BuildingPricingToolWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BuildingPricingToolWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

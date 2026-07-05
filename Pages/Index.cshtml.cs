@@ -31,10 +31,24 @@ namespace BuildingPricingToolWeb.Pages
         [Range(0, 500, ErrorMessage = "Window count cannot be negative.")]
         public int WindowCount { get; set; }
 
+        [BindProperty]
+        public MaterialType MaterialType { get; set; } = MaterialType.Wood;
+
         public Estimate? EstimateResult { get; set; }
 
         public void OnGet()
         {
+        }
+
+        private double GetMaterialCostPerSquareFoot(MaterialType materialType)
+        {
+            return materialType switch
+            {
+                MaterialType.Wood => 8.50,
+                MaterialType.Steel => 12.75,
+                MaterialType.Concrete => 10.25,
+                _ => 8.50
+            };
         }
 
         public IActionResult OnPost()
@@ -50,7 +64,10 @@ namespace BuildingPricingToolWeb.Pages
             double wallArea = building.CalculateWallArea();
             double roofArea = building.CalculateRoofArea();
 
-            double materialCost = floorArea * 8.50;
+            double totalSurfaceArea = floorArea + wallArea + roofArea;
+            double materialRate = GetMaterialCostPerSquareFoot(MaterialType);
+            double materialCost = totalSurfaceArea * materialRate;
+
             double laborCost = floorArea * 4.25;
             double totalCost = materialCost + laborCost;
 
