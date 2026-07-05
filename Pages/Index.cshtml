@@ -73,19 +73,26 @@
     </section>
 
     @if (Model.EstimateResult != null)
-    {
-        <section>
-            <h2>Estimate Results</h2>
+{
+    <section class="results">
+        <h2>Estimate Breakdown</h2>
 
-            <p>Floor Area: @Model.EstimateResult.FloorArea.ToString("N2") sq ft</p>
-            <p>Wall Area: @Model.EstimateResult.WallArea.ToString("N2") sq ft</p>
-            <p>Roof Area: @Model.EstimateResult.RoofArea.ToString("N2") sq ft</p>
+        <h3>Selected Options</h3>
+        <p><strong>Material:</strong> @Model.EstimateResult.SelectedMaterial</p>
+        <p><strong>Material Rate:</strong> @Model.EstimateResult.MaterialRate.ToString("C") per sq ft</p>
 
-            <p>Material Cost: $@Model.EstimateResult.MaterialCost.ToString("N2")</p>
-            <p>Labor Cost: $@Model.EstimateResult.LaborCost.ToString("N2")</p>
-            <p>Total Cost: $@Model.EstimateResult.TotalCost.ToString("N2")</p>
+        <h3>Area Calculations</h3>
+        <p><strong>Floor Area:</strong> @Model.EstimateResult.FloorArea.ToString("N2") sq ft</p>
+        <p><strong>Wall Area:</strong> @Model.EstimateResult.WallArea.ToString("N2") sq ft</p>
+        <p><strong>Roof Area:</strong> @Model.EstimateResult.RoofArea.ToString("N2") sq ft</p>
+        <p><strong>Total Surface Area:</strong> @Model.EstimateResult.TotalSurfaceArea.ToString("N2") sq ft</p>
 
-            <p><strong>Fusion CSV file updated successfully.</strong></p>
-        </section>
-    }
+        <h3>Cost Breakdown</h3>
+        <p><strong>Material Cost:</strong> @Model.EstimateResult.MaterialCost.ToString("C")</p>
+        <p><strong>Labor Cost:</strong> @Model.EstimateResult.LaborCost.ToString("C")</p>
+
+        <h3>Total Estimate</h3>
+        <p class="total-cost">@Model.EstimateResult.TotalCost.ToString("C")</p>
+    </section>
+}
 </main>

@@ -73,9 +73,14 @@ namespace BuildingPricingToolWeb.Pages
 
             EstimateResult = new Estimate
             {
+                SelectedMaterial = MaterialType,
+                MaterialRate = materialRate,
+
                 FloorArea = floorArea,
                 WallArea = wallArea,
                 RoofArea = roofArea,
+                TotalSurfaceArea = totalSurfaceArea,
+
                 MaterialCost = materialCost,
                 LaborCost = laborCost,
                 TotalCost = totalCost

@@ -119,7 +119,6 @@
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/scopedcss/bundle/BuildingPricingToolWeb.styles.css
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/scopedcss/projectbundle/BuildingPricingToolWeb.bundle.scp.css
-/Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/compressed/6ps4njtb43-{0}-n2vh11nvt6-n2vh11nvt6.gz
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/compressed/w1xs0vu5v2-{0}-61n19gt1b8-61n19gt1b8.gz
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/compressed/c1f99xoofq-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/compressed/d4aqukvhun-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -193,3 +192,4 @@
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/BuildingPricingToolWeb.pdb
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/BuildingPricingToolWeb.genruntimeconfig.cache
 /Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/ref/BuildingPricingToolWeb.dll
+/Users/samuel/Documents/GitHub/BuildingPricingToolWeb/obj/Debug/net10.0/compressed/6ps4njtb43-{0}-vndfsl2rn5-vndfsl2rn5.gz

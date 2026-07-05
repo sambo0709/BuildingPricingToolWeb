@@ -111,3 +111,25 @@ strong {
   border-top: 1px solid #d9dee5;
   white-space: normal;
 }
+.results {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d9dee5;
+    border-radius: 10px;
+}
+
+.results h2 {
+    margin-top: 0;
+}
+
+.results h3 {
+    margin-top: 20px;
+    color: #374151;
+}
+
+.total-cost {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #111827;
+}
