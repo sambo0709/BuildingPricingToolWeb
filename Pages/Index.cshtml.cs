@@ -95,12 +95,12 @@ namespace BuildingPricingToolWeb.Pages
                 DoorCost = doorCost,
                 WindowCost = windowCost,
                 FeatureCost = featureCost,
-                
+
                 TotalCost = totalCost
             };
 
             string filePath = "/Users/samuel/BuildingPricingTool/fusion_building_data.csv";
-            string csvData = $"{Width},{Length},{WallHeight},{RoofPitch},{DoorCount},{WindowCount}";
+            string csvData = $"{Width},{Length},{WallHeight},{RoofPitch},{DoorCount},{WindowCount},{MaterialType}";
             System.IO.File.WriteAllText(filePath, csvData);
 
             return Page();
