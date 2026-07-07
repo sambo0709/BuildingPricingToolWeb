@@ -12,6 +12,11 @@ namespace BuildingPricingToolWeb.Models
 
         public double MaterialCost { get; set; }
         public double LaborCost { get; set; }
+
+        public double DoorCost { get; set; }
+        public double WindowCost { get; set; }
+        public double FeatureCost { get; set; }
+
         public double TotalCost { get; set; }
     }
 }

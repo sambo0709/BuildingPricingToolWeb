@@ -90,6 +90,9 @@
         <h3>Cost Breakdown</h3>
         <p><strong>Material Cost:</strong> @Model.EstimateResult.MaterialCost.ToString("C")</p>
         <p><strong>Labor Cost:</strong> @Model.EstimateResult.LaborCost.ToString("C")</p>
+        <p><strong>Door Cost:</strong> @Model.EstimateResult.DoorCost.ToString("C")</p>
+        <p><strong>Window Cost:</strong> @Model.EstimateResult.WindowCost.ToString("C")</p>
+        <p><strong>Total Feature Cost:</strong> @Model.EstimateResult.FeatureCost.ToString("C")</p>
 
         <h3>Total Estimate</h3>
         <p class="total-cost">@Model.EstimateResult.TotalCost.ToString("C")</p>

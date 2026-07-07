@@ -69,7 +69,15 @@ namespace BuildingPricingToolWeb.Pages
             double materialCost = totalSurfaceArea * materialRate;
 
             double laborCost = floorArea * 4.25;
-            double totalCost = materialCost + laborCost;
+
+            double doorUnitCost = 650;
+            double windowUnitCost = 350;
+
+            double doorCost = DoorCount * doorUnitCost;
+            double windowCost = WindowCount * windowUnitCost;
+            double featureCost = doorCost + windowCost;
+
+            double totalCost = materialCost + laborCost + featureCost;
 
             EstimateResult = new Estimate
             {
@@ -83,6 +91,11 @@ namespace BuildingPricingToolWeb.Pages
 
                 MaterialCost = materialCost,
                 LaborCost = laborCost,
+
+                DoorCost = doorCost,
+                WindowCost = windowCost,
+                FeatureCost = featureCost,
+                
                 TotalCost = totalCost
             };
 
